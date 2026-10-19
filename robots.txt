@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Depois de ter o domínio, crie um sitemap.xml e descomente:
+# Sitemap: https://SEU-DOMINIO/sitemap.xml
