@@ -63,7 +63,7 @@
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre nós</a>
-          <a href="#galeria">Inspirações</a>
+          <a href="#avaliacoes">Avaliações</a>
           <a href="#localizacao">Como chegar</a>
           <a class="button button-small nav-cta" href="#agendamento">Agendar</a>
         </nav>
@@ -98,7 +98,7 @@
       <section class="trust-strip" aria-label="Destaques do Espaço dellas">
         <div class="container trust-grid">
           <div class="trust-item"><span class="trust-icon">★</span><div><strong>5,0</strong><small>no Google</small></div></div>
-          <div class="trust-item"><span class="trust-icon">♡</span><div><strong>+41</strong><small>avaliações</small></div></div>
+          <div class="trust-item"><span class="trust-icon">♡</span><div><strong>41</strong><small>avaliações</small></div></div>
           <div class="trust-item"><span class="trust-icon">⌖</span><div><strong>Aldeia</strong><small>Camaragibe — PE</small></div></div>
           <div class="trust-item trust-note"><span class="trust-icon">✦</span><div><strong>Um momento seu</strong><small>leveza, beleza e acolhimento</small></div></div>
         </div>
@@ -131,84 +131,51 @@
         </div>
       </section>
 
-      <section class="section-pad gallery-section" id="galeria" aria-labelledby="gallery-title">
+      <section class="reviews-section section-pad" id="avaliacoes" aria-labelledby="reviews-title">
         <div class="container">
-          <div class="section-heading centered-heading reveal"><p class="eyebrow">Inspirações reais</p><h2 id="gallery-title">Detalhes que fazem <em>diferença.</em></h2><p>Um pouco do que acontece por aqui — sempre com delicadeza, técnica e carinho.</p></div>
-          <div class="gallery-grid" id="gallery-grid"></div>
-        </div>
-      </section>
-
-      <section class="testimonials-section section-pad" id="testimonials" aria-labelledby="testimonials-title">
-        <div class="container testimonials-layout">
-          <div class="testimonials-intro reveal"><p class="eyebrow">Quem vive, conta</p><h2 id="testimonials-title">Palavras que <em>ficam.</em></h2><p>O melhor do nosso trabalho é ver você sair daqui feliz — e voltar quando quiser.</p><a class="text-link dark-link" href="https://www.google.com/search?q=Espa%C3%A7o+dellas+Camaragibe" target="_blank" rel="noopener">Ver avaliações no Google <span aria-hidden="true">↗</span></a></div>
-          <div class="testimonials-grid" id="testimonials-grid"></div>
+          <div class="section-heading centered-heading reveal">
+            <p class="eyebrow">Avaliações no Google</p>
+            <h2 id="reviews-title">Quem já veio, <em>recomenda.</em></h2>
+            <div class="reviews-score"><strong>5,0</strong><span class="review-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</span><small>41 avaliações no Google</small></div>
+          </div>
+          <div class="reviews-grid" id="reviews-grid"></div>
+          <p class="reviews-more"><a class="text-link dark-link" id="google-link" href="#" target="_blank" rel="noopener">Ver todas as avaliações no Google <span aria-hidden="true">↗</span></a></p>
         </div>
       </section>
 
       <section class="booking-section section-pad" id="agendamento" aria-labelledby="booking-title">
         <div class="container booking-shell">
-          <div class="booking-heading reveal"><p class="eyebrow">Seu próximo cuidado começa aqui</p><h2 id="booking-title">Agende seu <em>horário.</em></h2><p>É rapidinho. Escolha seus serviços, encontre o melhor momento e pronto — a gente espera por você.</p></div>
+          <div class="booking-heading reveal"><p class="eyebrow">Seu próximo cuidado começa aqui</p><h2 id="booking-title">Agende seu <em>horário.</em></h2><p>Escolha o que você quer fazer e diga seu nome. A gente continua a conversa pelo WhatsApp e combina o melhor dia e horário.</p></div>
           <div class="wizard reveal reveal-delay" id="booking-wizard">
             <div class="wizard-progress" aria-label="Progresso do agendamento">
               <div class="progress-line"><span id="progress-line-fill"></span></div>
               <ol class="step-indicators">
                 <li class="active" data-indicator="1"><span>01</span><small>Serviços</small></li>
-                <li data-indicator="2"><span>02</span><small>Data</small></li>
-                <li data-indicator="3"><span>03</span><small>Horário</small></li>
-                <li data-indicator="4"><span>04</span><small>Seus dados</small></li>
-                <li data-indicator="5"><span>05</span><small>Confirmar</small></li>
+                <li data-indicator="2"><span>02</span><small>Seu nome</small></li>
               </ol>
             </div>
 
             <div class="wizard-step active" data-step="1">
               <div class="step-heading"><span class="step-kicker">Passo 01</span><h3>O que você gostaria de fazer?</h3><p>Você pode escolher mais de um serviço.</p></div>
               <div class="wizard-services" id="wizard-services"></div>
-              <div class="wizard-total"><span><small>Tempo estimado</small><strong id="total-duration">0 min</strong></span><span><small>Valor estimado</small><strong id="total-price">R$ 0,00</strong></span></div>
               <p class="form-error" id="step-1-error" role="alert"></p>
-              <div class="wizard-actions"><span></span><button class="button" type="button" data-next="2">Escolher data <span aria-hidden="true">→</span></button></div>
+              <div class="wizard-actions"><span></span><button class="button" type="button" data-next="2">Continuar <span aria-hidden="true">→</span></button></div>
             </div>
 
             <div class="wizard-step" data-step="2" hidden>
-              <div class="step-heading"><span class="step-kicker">Passo 02</span><h3>Qual dia combina com você?</h3><p>Escolha uma data disponível no calendário.</p></div>
-              <div class="calendar-wrap">
-                <div class="calendar-header"><button class="icon-button" type="button" id="calendar-prev" aria-label="Mês anterior">←</button><strong id="calendar-month"></strong><button class="icon-button" type="button" id="calendar-next" aria-label="Próximo mês">→</button></div>
-                <div class="calendar-weekdays" aria-hidden="true"><span>dom</span><span>seg</span><span>ter</span><span>qua</span><span>qui</span><span>sex</span><span>sáb</span></div>
-                <div class="calendar-grid" id="calendar-grid" role="group" aria-label="Calendário de datas disponíveis"></div>
-                <div class="calendar-legend"><span><i class="legend-dot available"></i> disponível</span><span><i class="legend-dot closed"></i> fechado</span></div>
-              </div>
-              <p class="selected-date-note" id="selected-date-note">Nenhum dia selecionado ainda.</p>
-              <p class="form-error" id="step-2-error" role="alert"></p>
-              <div class="wizard-actions"><button class="button button-ghost" type="button" data-back="1">← Voltar</button><button class="button" type="button" data-next="3">Ver horários <span aria-hidden="true">→</span></button></div>
-            </div>
-
-            <div class="wizard-step" data-step="3" hidden>
-              <div class="step-heading"><span class="step-kicker">Passo 03</span><h3>Qual horário fica melhor?</h3><p>Horários com atendimento já reservado aparecem indisponíveis.</p></div>
-              <div class="selected-context" id="time-context"></div>
-              <div class="time-slots" id="time-slots"></div>
-              <p class="form-error" id="step-3-error" role="alert"></p>
-              <div class="wizard-actions"><button class="button button-ghost" type="button" data-back="2">← Voltar</button><button class="button" type="button" data-next="4">Continuar <span aria-hidden="true">→</span></button></div>
-            </div>
-
-            <div class="wizard-step" data-step="4" hidden>
-              <div class="step-heading"><span class="step-kicker">Passo 04</span><h3>Como podemos chamar você?</h3><p>Esses dados ajudam a confirmar seu atendimento pelo WhatsApp.</p></div>
+              <div class="step-heading"><span class="step-kicker">Passo 02</span><h3>Como podemos chamar você?</h3><p>Vamos abrir o WhatsApp com a mensagem pronta para você só enviar.</p></div>
               <form class="booking-form" id="booking-form" novalidate>
-                <div class="form-field"><label for="customer-name">Seu nome <span>*</span></label><input id="customer-name" name="name" type="text" placeholder="Como você gosta de ser chamada?" autocomplete="name" aria-describedby="name-error" required /><small class="field-error" id="name-error"></small></div>
-                <div class="form-field"><label for="customer-whatsapp">Seu WhatsApp <span>*</span></label><input id="customer-whatsapp" name="whatsapp" type="tel" inputmode="numeric" placeholder="(81) 99999-9999" autocomplete="tel" maxlength="15" aria-describedby="whatsapp-error" required /><small class="field-error" id="whatsapp-error"></small></div>
-                <div class="form-field full-field"><label for="customer-note">Alguma observação? <small>opcional</small></label><textarea id="customer-note" name="note" rows="3" placeholder="Ex.: prefiro um tom nude nas unhas..."></textarea></div>
+                <div class="form-field full-field"><label for="customer-name">Seu nome <span>*</span></label><input id="customer-name" name="name" type="text" placeholder="Como você gosta de ser chamada?" autocomplete="given-name" aria-describedby="name-error" required /><small class="field-error" id="name-error"></small></div>
+                <div class="form-field full-field"><label for="customer-note">Quer contar algo mais? <small>opcional</small></label><textarea id="customer-note" name="note" rows="3" placeholder="Ex.: prefiro um tom nude nas unhas..."></textarea></div>
               </form>
-              <div class="wizard-actions"><button class="button button-ghost" type="button" data-back="3">← Voltar</button><button class="button" type="button" data-next="5">Revisar agendamento <span aria-hidden="true">→</span></button></div>
-            </div>
-
-            <div class="wizard-step" data-step="5" hidden>
-              <div class="step-heading"><span class="step-kicker">Passo 05</span><h3>Está tudo certo?</h3><p>Confira os detalhes antes de confirmar seu horário.</p></div>
-              <div class="review-card" id="review-card"></div>
-              <p class="form-error" id="step-5-error" role="alert"></p>
-              <div class="wizard-actions"><button class="button button-ghost" type="button" data-back="4">← Ajustar</button><button class="button" type="button" id="confirm-booking">Confirmar agendamento <span aria-hidden="true">↗</span></button></div>
+              <div class="message-preview"><small>Mensagem que será enviada</small><p id="message-preview"></p></div>
+              <p class="form-error" id="step-2-error" role="alert"></p>
+              <div class="wizard-actions"><button class="button button-ghost" type="button" data-back="1">← Voltar</button><button class="button" type="button" id="confirm-booking">Enviar pelo WhatsApp <span aria-hidden="true">↗</span></button></div>
             </div>
           </div>
 
           <div class="booking-success" id="booking-success" hidden aria-live="polite">
-            <div class="success-icon">✓</div><p class="eyebrow">Quase lá</p><h3>Envie no WhatsApp para confirmar.</h3><p id="success-message">Abrimos o WhatsApp para você enviar o pedido ao Espaço dellas. O horário fica confirmado quando elas responderem.</p><div class="success-actions"><a class="button" id="success-whatsapp-link" href="#" target="_blank" rel="noopener">Abrir WhatsApp <span aria-hidden="true">↗</span></a><button class="button button-ghost" type="button" id="new-booking">Fazer novo agendamento</button></div>
+            <div class="success-icon">✓</div><p class="eyebrow">Quase lá</p><h3>Envie a mensagem no WhatsApp.</h3><p id="success-message"></p><div class="success-actions"><a class="button" id="success-whatsapp-link" href="#" target="_blank" rel="noopener">Abrir WhatsApp <span aria-hidden="true">↗</span></a><button class="button button-ghost" type="button" id="new-booking">Fazer novo pedido</button></div>
           </div>
         </div>
       </section>
@@ -222,19 +189,9 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-top"><div class="footer-brand"><a class="brand light-brand" href="#topo"><span class="brand-mark">ed</span><span class="brand-name">Espaço <strong>dellas</strong></span></a><p>Um espaço de beleza para você se sentir em casa.</p></div><div class="footer-links"><div><strong>Explore</strong><a href="#servicos">Serviços</a><a href="#sobre">Sobre nós</a><a href="#galeria">Inspirações</a></div><div><strong>Converse com a gente</strong><a id="footer-whatsapp" href="#">WhatsApp</a><a id="footer-instagram" href="#" target="_blank" rel="noopener">Instagram</a><button class="footer-admin-link" type="button" id="owner-access">Área da dona</button></div></div></div>
+      <div class="container footer-top"><div class="footer-brand"><a class="brand light-brand" href="#topo"><span class="brand-mark">ed</span><span class="brand-name">Espaço <strong>dellas</strong></span></a><p>Um espaço de beleza para você se sentir em casa.</p></div><div class="footer-links"><div><strong>Explore</strong><a href="#servicos">Serviços</a><a href="#sobre">Sobre nós</a><a href="#avaliacoes">Avaliações</a></div><div><strong>Converse com a gente</strong><a id="footer-whatsapp" href="#">WhatsApp</a><a id="footer-instagram" href="#" target="_blank" rel="noopener">Instagram</a></div></div></div>
       <div class="container footer-bottom"><span>© <span id="current-year"></span> Espaço dellas. Feito com carinho.</span><span>Beleza que abraça.</span></div>
     </footer>
-
-    <div class="owner-panel" id="owner-panel" hidden aria-labelledby="owner-panel-title">
-      <div class="owner-panel-backdrop" data-close-owner></div>
-      <section class="owner-panel-card" id="owner-panel-card" role="dialog" aria-modal="true" aria-labelledby="owner-panel-title" aria-describedby="owner-panel-description">
-        <button class="owner-close icon-button" type="button" data-close-owner aria-label="Fechar painel">×</button>
-        <p class="eyebrow">Acesso reservado</p><h2 id="owner-panel-title">Agenda da semana</h2><p class="owner-disclaimer" id="owner-panel-description">Este painel lê apenas os agendamentos salvos neste navegador. Para uma agenda compartilhada entre dispositivos, conecte um backend conforme o guia.</p>
-        <form class="owner-login" id="owner-login"><label for="owner-password">Senha do painel</label><div class="owner-password-row"><input id="owner-password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required /><button class="button button-small" type="submit">Entrar</button></div><small class="field-error" id="owner-error"></small></form>
-        <div class="owner-content" id="owner-content" hidden><div class="owner-summary" id="owner-summary"></div><div class="owner-bookings" id="owner-bookings"></div><button class="button button-ghost button-small" type="button" id="owner-logout">Sair do painel</button></div>
-      </section>
-    </div>
 
     <a class="floating-whatsapp" id="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Falar com o Espaço dellas pelo WhatsApp"><span aria-hidden="true">◔</span><span>WhatsApp</span></a>
     <a class="mobile-book-button" href="#agendamento">Agendar horário <span aria-hidden="true">↗</span></a>
