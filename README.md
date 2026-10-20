@@ -1,4 +1,4 @@
-Atualizado em 19/10.
+#Atualizado em 19/10.#
 # Espaço dellas — site
 
 Site estático (HTML + CSS + JS), sem build. Funciona no Cloudflare e no GitHub Pages.
